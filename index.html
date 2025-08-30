@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form with OTP</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <form action="login.php" method="POST">
+    <h2>Login</h2>
+
+    <!-- Email -->
+    <div>
+      <label for="gmail">User / Gmail</label>
+      <input id="gmail" name="gmail" type="email" placeholder="User Name" required>
+    </div>
+    
+    <!-- Password -->
+   <!-- Password -->
+<div>
+  <label for="password">Password</label>
+  <div class="input-wrapper">
+    <input id="password" name="password" type="password" placeholder="Enter password" required>
+    <span class="toggle-eye" onclick="togglePassword()">👁️</span>
+
+  </div>
+</div>
+
+
+    <!-- Show password -->
+    
+    
+    <!-- Only Submit button -->
+    <button type="submit" name="login">Submit</button>
+
+    <!-- Links wrapper -->
+    <div class="links">
+      <a href="forget.html">Forget password</a> |
+      <a target="_blank" href="Registration.php">Registration</a>
+    </div>
+  </form>
+
+  <script>
+  function togglePassword() {
+    let pass = document.getElementById("password");
+    let eye = document.querySelector(".toggle-eye");
+
+    if (pass.type === "password") {
+      pass.type = "text";
+      eye.textContent = "👀"; // change icon
+    } else {
+      pass.type = "password";
+      eye.textContent = "🙈"; // back to eye
+    }
+  }
+</script>
+
+</html>
